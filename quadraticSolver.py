@@ -18,9 +18,10 @@ def findRoots(cfxs, coeff, constant):
         print(f"{coeff}")
         print(f"{constant}")
 
-        quadRoot = ((coeff*-1)+(cmath.sqrt(coeff*coeff - (4*cfxs*constant))))/2*cfxs
-
-        printOutput(quadRoot)
+        quadRootOne = ((coeff*-1)+(cmath.sqrt(coeff*coeff - (4*cfxs*constant))))/2*cfxs
+        printOutput(f"Quadratic Root One Real : {(float(quadRootOne.real))*-1:.2f}, Quadratic Root One Imaginary : {float(quadRootOne.imag):.2f}")
+        quadRootTwo = ((coeff*-1)-(cmath.sqrt(coeff*coeff - (4*cfxs*constant))))/2*cfxs
+        printOutput(f"Quadratic Root Two Real : {(float(quadRootTwo.real))*-1:.2f}, Quadratic Root Two Imaginary : {float(quadRootTwo.imag):.2f} ")
     
     except Exception as error : 
         print(error)
